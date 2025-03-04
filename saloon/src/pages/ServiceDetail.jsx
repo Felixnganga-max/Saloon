@@ -22,7 +22,7 @@ const ServiceDetail = () => {
     const fetchService = async () => {
       try {
         const response = await fetch(
-          `http://localhost:9000/api/services/${id}`
+          `https://saloon-e7dp.vercel.app/api/services/${id}`
         );
         if (!response.ok) throw new Error("Failed to fetch service");
         const data = await response.json();
@@ -76,7 +76,7 @@ const ServiceDetail = () => {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-gradient-to-r from-purple-50 to-pink-50">
+      <div className="mx-auto flex justify-center items-center h-screen bg-gradient-to-r from-purple-50 to-pink-50">
         <div className="relative w-24 h-24">
           <div className="absolute top-0 left-0 w-full h-full border-8 border-purple-300 border-t-purple-600 rounded-full animate-spin"></div>
           <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-purple-600 font-bold">
@@ -143,7 +143,7 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-red-50 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="max-w-5xl mx-auto mt-20 bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="md:flex">
           {/* Image Section */}
           <div className="md:w-1/2 relative">
@@ -299,7 +299,7 @@ const ServiceDetail = () => {
                   <img
                     src={image}
                     alt={`${service.name} ${index + 1}`}
-                    className="w-full h-16 object-cover"
+                    className="w-full h-32 object-cover"
                   />
                 </div>
               ))}

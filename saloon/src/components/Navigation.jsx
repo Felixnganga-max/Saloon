@@ -12,6 +12,7 @@ import {
   Star,
   Sparkles,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +97,7 @@ const Navigation = () => {
                 <Sparkles size={12} fill="#FF69B4" stroke="none" />
               </div>
             </div>
-            <div>
+            <Link to={"/"}>
               <h1 className="text-white font-bold text-xl md:text-2xl tracking-tight group-hover:tracking-wider transition-all duration-300">
                 GlamCut
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-yellow-300 to-pink-300 font-extrabold">
@@ -106,7 +107,7 @@ const Navigation = () => {
               <p className="text-gray-300 text-xs font-light -mt-1 transition-all duration-300 group-hover:text-pink-200">
                 Salon & Kinyozi
               </p>
-            </div>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
