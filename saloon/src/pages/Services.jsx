@@ -67,7 +67,9 @@ const Services = () => {
     const fetchServices = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("http://localhost:9000/api/services/");
+        const response = await fetch(
+          "https://saloon-e7dp.vercel.app/api/services/"
+        );
 
         // Check if the response is OK and content type is JSON
         if (!response.ok) {
